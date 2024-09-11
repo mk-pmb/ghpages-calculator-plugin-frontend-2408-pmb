@@ -20,17 +20,13 @@ const injections = {
 const EX = async function cliMain() {
   const ctx = {
     ...EX.injections,
-
-    // These env variables are exported by cli.sh:
-    invokedIn: env('INVOKED_IN'),
-    invokedAs: env('INVOKED_AS'),
-
     inputs: {},
+    invokedAs: env('INVOKED_AS'), // exported by cli.sh
   };
 
   [ctx.cliOpt, ...ctx.cliArgs] = parseCliArgs(process.argv.slice(2));
   ctx.pluginFile = (function decidePluginName() {
-    let p = ctx.invokedIn + '/' + ctx.invokedAs;
+    let p = process.cwd() + '/' + ctx.invokedAs.split('/').slice(-1)[0];
     p = p.replace(/\.sh$/, '');
     p = p.replace(/(?:(\/)|\.|\-)cli$/, '$1');
     p = p.replace(/\/$/, '/plugin');
