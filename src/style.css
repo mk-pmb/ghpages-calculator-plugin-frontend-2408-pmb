@@ -1,0 +1,57 @@
+﻿@charset "UTF-8";
+/* -*- coding: UTF-8, tab-width: 2 -*- */
+
+body { margin: 1em 2em; }
+
+input, textarea,
+body { background-color: #222233; color: gainsboro; }
+
+input, textarea,
+.input-field-box {
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  outline: none;
+  vertical-align: top;
+  font: inherit;
+}
+
+textarea { overflow: scroll; resize: both; }
+input.monospace, textarea.monospace { font-family: monospace; }
+
+
+a { color: skyblue; text-decoration: none; }
+p { margin: 0; margin-bottom: 0.5em; }
+p.copyright { margin-top: 5em; font-size: 70%; }
+br+span { padding-left: 2em; }
+.slot { display: inline-block; text-align: center; }
+.slot.axis-letter { min-width: 1em; }
+.slot.direction { min-width: 3em; }
+.slot.distance { min-width: 2.5em; }
+.slot.coordinate { min-width: 5em; }
+sub { font-size: 60%; display: none; }
+
+.log {
+  min-height: 10em;
+}
+.log .log-entry {
+  margin-top: 1em;
+  padding: 0.1em 0.5em;
+  border: 0 solid silver;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-left-width: 2px;
+}
+.log .log-entry.error { color: tomato; border-color: tomato; }
+.log .log-entry > p:last-child { margin-bottom: 0; white-space: pre; }
+
+form.plugin-inputs .plugin-input {
+  display: inline-block;
+  margin: 0.5em;
+}
+form.plugin-inputs .plugin-input ~ .plugin-input { margin-left: 1em; }
+form.plugin-inputs .plugin-input label {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding-top: 2px;
+}
+form.plugin-inputs .plugin-input label p::after { content: ":"; }

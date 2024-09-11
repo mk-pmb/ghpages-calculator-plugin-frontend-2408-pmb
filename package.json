@@ -1,0 +1,41 @@
+{ "name": "ghpages-calculator-plugin-frontend-2408-pmb",
+  "version": "0.2409110500.0",
+  "description": "A CLI and web frontend framework for interacting with simple calculator functions.",
+  "keywords": [],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/ghpages-calculator-plugin-frontend-2408-pmb/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/ghpages-calculator-plugin-frontend-2408-pmb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/ghpages-calculator-plugin-frontend-2408-pmb/issues"
+  },
+  "contributors": [],
+
+  "private": false, "license": "ISC",
+
+  "main": "index.js",
+  "scripts": { "test": "elp && nodemjs test/all.mjs" },
+  "directories": { "test": "test" },
+  "eslintConfig": { "extends": "nodejs-pmb" },
+
+  "dependencies": {
+    "cli-args-parse-dashdash-2402-pmb": "^1.0.1",
+    "lodash": "^4.17.21",
+    "nodemjs": "^0.1.15",
+    "p-fatal": "^0.1.5",
+    "usnam-pmb": "^0.2.5",
+    "window-pmb": "^0.1.1"
+  },
+  "devDependencies": {
+    "eslint-config-nodejs-pmb": "^0.3.6",
+    "eslint-plugin-json-light-pmb": "^1.0.7",
+    "eslint-plugin-n": "^17.10.2",
+    "eslint-pretty-pmb": "^1.0.5"
+  },
+
+
+  "engines": { "npm": ">=7.0.0", "node": ">=16.0.0" }
+}
